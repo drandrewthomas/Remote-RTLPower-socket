@@ -18,7 +18,7 @@ When the server starts up it will print a simple message including the port numb
 
 ## Running the client
 
-Copy the Python files to your client computer, or even an andriod phone or tablet (the server should work fine using PyDroid3). Then just run the examples to try out your connection:
+Copy the Python files to your client computer, or even an andriod phone or tablet (the server works fine using PyDroid3). Then just run the examples to try out your connection:
 
     python3 getremotepower.py
 
