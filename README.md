@@ -10,7 +10,7 @@ There are few prerequisites for using this project. The main one is Python 3 its
 
 ## Running the server
 
-On the PC you have your RTL-SDR setup on, make sure you have rtlpower installed. Then put the rtlpowersocket.py on that computer and run:
+On the PC you have your RTL-SDR setup on, make sure you have rtlpower installed. Then put rtlpowersocket.py on that computer and run:
 
     python3 rtlpowersocket.py
 
