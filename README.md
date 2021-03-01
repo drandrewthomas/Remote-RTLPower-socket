@@ -6,7 +6,7 @@ Remote RTLPower Socket is a Python 3 library for remotely accessing RTL-SDR soft
 
 ## Python prerequisites
 
-There are few prerequisites for using this project. The main one is Python 3 itself (Python 2 isn't supported as it's deprecated and will raise errors due to data decoding if you try). On the server computer, with rtlpower installed, you will need to use pip to install 'websocket-server' and on the client computer you need 'install websocket_client'. If you want to try the example power graph program you'll also need matplotlib and numpy. Also, if you have a firewall don't forget to allow traffic through the websocket port (e.g. port 43219 if you haven't changed it)
+There are few prerequisites for using this project. The main one is Python 3 itself (Python 2 isn't supported as it's deprecated and will raise errors due to data decoding if you try). On the server computer, with rtlpower installed, you will need to use pip to install 'websocket-server' and on the client computer you need 'websocket_client'. If you want to try the example power graph program you'll also need matplotlib and numpy. Also, if you have a firewall don't forget to allow traffic through the websocket port (e.g. port 43219 if you haven't changed it)
 
 ## Running the server
 
