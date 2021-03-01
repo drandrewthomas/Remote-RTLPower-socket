@@ -12,7 +12,7 @@ There are few prerequisites for using this project. The main one is Python 3 its
 
 On the PC you have your RTL-SDR setup on, make sure you have rtlpower installed. Then put the rtlpowersocket.py on that computer and run:
 
-python3 rtlpowersocket.py
+    python3 rtlpowersocket.py
 
 When the server starts up it will print a simple message including the port number it is listening on.
 
@@ -20,32 +20,32 @@ When the server starts up it will print a simple message including the port numb
 
 Copy the Python files to your client computer, or even an andriod phone or tablet (the server should work fine using PyDroid3). Then just run the examples to try out your connection:
 
-python3 getremotepower.py
+    python3 getremotepower.py
 
-python3 getremotepowergraph.py
+    python3 getremotepowergraph.py
 
 ## Using the library in your own code
 
 Using this project is fairly straightforward. Firstly import the library into a Python file on your client computer (or Android device using PyDriod3) and create a remote power object:
 
-from remotepowerlib import remotepowerlib
-rp=remotepowerlib()
+    from remotepowerlib import remotepowerlib
+    rp=remotepowerlib()
 
 Now, tell it the IP address of the server on your local network (if you're accessing from the wider internet you'll need to port-forward the server port to this IP address too):
 
-rp.setsocketaddress("SERVER_IP_ADDRESS")
+    rp.setsocketaddress("SERVER_IP_ADDRESS")
 
 Next, set the rtlpower parameters for the power data you want. You can set them individually (e.g. rp.setfrequencies("118M","137M","200k")) and you'll find all the parameters in the remotepowerlib.py file. However, much easier is to get the library to parse a standard rtlpower commandline string:
 
-rtlstr="-f 118M:137M:200k -c 50% -g 50 -i 2s -1 -e 2s"
-rp.parse(rtlstr)
+    rtlstr="-f 118M:137M:200k -c 50% -g 50 -i 2s -1 -e 2s"
+    rp.parse(rtlstr)
 
 Finally, request the rtlpower data for your parameters using getdata() which will return True or False to indicate whether all went well. If all did go well you should see that the samples are a list of frequency/power values which you can process, use and store as you like.
 
-if rp.getdata():
-    print(rp.samples)
-else:
-    print("Something went wrong!")
+    if rp.getdata():
+        print(rp.samples)
+    else:
+        print("Something went wrong!")
 
 ## Credits
 
